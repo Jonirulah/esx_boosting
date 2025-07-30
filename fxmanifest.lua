@@ -39,8 +39,7 @@ files {
 
 depencendies {
     '/onesync',
-    'glow_minigames',
-    'timer',
-    'joni_tablet',
+    'esx_timer',
+    'esx_joni_tablet',
     't3_lockpick'
 }
