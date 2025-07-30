@@ -1,5 +1,5 @@
 Config = {}
-Config.ImageCDN = 'https://illuminati.groupoasis.eu/images/vehicles/'
+Config.ImageCDN = 'https://xxx.xxx.eu/images/vehicles/'
 Config.Tablet = {
     id = GetCurrentResourceName(),
     name = 'Boosting',

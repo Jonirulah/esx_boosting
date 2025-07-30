@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `boosting_contracts` (
 CREATE TABLE IF NOT EXISTS `boosting_players` (
   `identifier` varchar(16) NOT NULL,
   `profile_name` varchar(32) DEFAULT 'Anónimo',
-  `profile_picture` varchar(250) DEFAULT 'https://illuminati.groupoasis.eu/images/interfaces/pfp.jpg',
+  `profile_picture` varchar(250) DEFAULT 'https://xxxx.xxxx.eu/images/interfaces/pfp.jpg',
   `xp` int(11) NOT NULL DEFAULT 0,
   `reputation` int(11) NOT NULL DEFAULT 0,
   `credits` int(11) NOT NULL DEFAULT 0,
