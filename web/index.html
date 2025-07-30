@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Boosting</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="libs/loading-bar.min.css" />
+    <script type="text/javascript" src="libs/loading-bar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.14.0/sweetalert2.min.js" integrity="sha512-OlF0YFB8FRtvtNaGojDXbPT7LgcsSB3hj0IZKaVjzFix+BReDmTWhntaXBup8qwwoHrTHvwTxhLeoUqrYY9SEw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.14.0/sweetalert2.css" integrity="sha512-Gebe6n4xsNr0dWAiRsMbjWOYe1PPVar2zBKIyeUQKPeafXZ61sjU2XCW66JxIPbDdEH3oQspEoWX8PQRhaKyBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="dashboard-container">
+            <!-- Icons -->
+            <div class="icons">
+                <button onclick=showBoostingDashboard() class="home-icon">
+                    <svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m20.515 13.754c-.004.485-.395.876-.88.88h-3.548c-.485-.003-.877-.395-.88-.88.004-.485.395-.876.88-.88h3.548c.484.004.876.396.88.88zm-12.376 0c-.003.485-.395.877-.88.88h-3.548c-.485-.003-.877-.395-.88-.88.004-.485.395-.876.88-.88h3.548c.484.004.876.396.879.88zm-1.84-8.167h11.404l1.399 3.562c-.022 0-.044-.004-.069-.004h-14.134zm17.68 2.706c-.108-.635-.653-1.112-1.31-1.112-.074 0-.147.006-.217.018l.008-.001-2.183.356c-.035.007-.065.015-.094.026l.005-.002-1.406-3.578h-13.566l-1.406 3.578c-.025-.009-.056-.017-.087-.023l-2.185-.357c-.062-.01-.134-.016-.208-.016-.657 0-1.204.477-1.311 1.104l-.001.008c-.01.063-.016.135-.016.208 0 .657.477 1.203 1.104 1.311l.008.001 1.271.209c-.78.751-1.272 1.795-1.3 2.955v.005 6.086h4.4v-2.3h12.429v2.3h4.4v-3.248c.018-.076.028-.163.028-.253v-2.586c-.027-1.122-.485-2.132-1.213-2.876l.001.001 1.766-.29c.634-.108 1.11-.653 1.11-1.309 0-.074-.006-.147-.018-.218l.001.008z"></path></g></svg>                </button>
+                <button onclick=showEditProfile() class="settings-icon">
+                    <svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 472.645 472.645" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M450.667,344.35l-90.092-89.994l-46.146,46.146l-31.483-31.484l97.143-97.144c21.244,0.441,42.753-7.493,58.973-23.713 c23.801-23.8,29.707-58.796,17.63-88.15l-48.482,48.482l-39.668-4.408l-4.407-39.667l48.482-48.482 c-29.353-12.076-64.349-6.171-88.15,17.63c-16.22,16.22-24.154,37.729-23.713,58.974l-97.126,97.126L84.292,70.332V37.544 c0-3.446-1.772-6.695-4.726-8.468L33.387,1.408c-3.84-2.363-8.862-1.674-12.012,1.477L2.864,21.298 c-3.151,3.249-3.742,8.172-1.477,12.111l27.668,46.08c1.871,2.954,5.022,4.825,8.468,4.825H70.31l119.377,119.293L92.543,300.75 c-21.243-0.441-42.752,7.492-58.973,23.711c-23.8,23.801-29.706,58.796-17.63,88.151l48.482-48.482l39.668,4.407l4.407,39.668 l-48.482,48.482c29.353,12.076,64.349,6.171,88.15-17.63c16.221-16.221,24.154-37.729,23.712-58.974l97.144-97.143l31.483,31.483 l-46.171,46.172l90.092,89.994c14.178,14.178,32.985,22.055,53.071,22.055c20.086,0,38.892-7.877,53.169-22.055 c14.178-14.178,21.957-32.985,21.957-53.071C472.624,377.433,464.846,358.627,450.667,344.35z M361.432,375.346l-13.922-13.922 l13.922-13.923l13.923,13.923L361.432,375.346z M396.24,410.164l-13.923-13.933l13.933-13.922l13.922,13.932L396.24,410.164z"></path> </g> </g> </g></svg>                
+                </button>
+                <button onclick=showDashboard() class="leaderboard-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 19H9V12.5V8.6C9 8.26863 9.26863 8 9.6 8H14.4C14.7314 8 15 8.26863 15 8.6V14.5V19Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 5H9" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M20.4 19H15V15.1C15 14.7686 15.2686 14.5 15.6 14.5H20.4C20.7314 14.5 21 14.7686 21 15.1V18.4C21 18.7314 20.7314 19 20.4 19Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 19V13.1C9 12.7686 8.73137 12.5 8.4 12.5H3.6C3.26863 12.5 3 12.7686 3 13.1V18.4C3 18.7314 3.26863 19 3.6 19H9Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>                
+                </button>
+                <button onclick=showShopDashboard() class="shop-icon">
+                    <svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 253" enable-background="new 0 0 256 253" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M127.925,218.85c28.065,0,51-22.784,51-51s-22.784-51-51-51s-50.849,22.935-50.849,51.151 C77.075,196.066,99.859,218.85,127.925,218.85z M125.108,172.176c-9.355-3.269-15.189-7.997-15.189-16.396 c0-7.746,5.13-13.831,14.536-15.743v-8.399h7.041v7.997c5.834,0,10.059,1.207,13.178,2.867l-2.867,10.059 c-2.314-0.956-6.086-2.565-11.266-2.565c-5.18,0-7.997,2.565-7.997,5.13c0,3.521,3.269,4.879,10.311,7.746 c9.607,3.521,14.083,8.399,14.083,16.396s-4.879,14.083-15.189,16.396v7.997h-7.041v-7.746c-6.086,0-12.222-1.609-15.189-3.269 l2.565-10.311c3.269,1.609,8.399,3.521,13.831,3.521c5.834,0,8.701-2.565,8.701-6.086S131.848,174.791,125.108,172.176z M2,69 c0,13.678,9.625,25.302,22,29.576V233H2v18h252v-18h-22V98.554c12.89-3.945,21.699-15.396,22-29.554v-8H2V69z M65.29,68.346 c0,6.477,6.755,31.47,31.727,31.47c21.689,0,31.202-19.615,31.202-31.47c0,11.052,7.41,31.447,31.464,31.447 c21.733,0,31.363-20.999,31.363-31.447c0,14.425,9.726,26.416,22.954,30.154V233H42V98.594C55.402,94.966,65.29,82.895,65.29,68.346 z M254,54H2l32-32V2h189v20h-0.168L254,54z"></path> </g></svg>
+                </button>
+            </div>
+            <!-- Section Title-->
+            <div class="dashboard-title">
+            </div>
+            <!-- Sections -->
+            <div class="dashboard-boosting">
+                <div class="dashboard-header">
+                    <div class="profile-info">
+                        <div class="user-details">
+                            <div class="pfp-container">
+                                <img class="pfp" id="profile-picture" src="./assets/pfp.jpg">
+                            </div>
+                            <div class="userdata-container">
+                                <h2 id="username"></h2>
+                                <h2 id="current-class"></h2>
+                                <p><span class="ls-1 fs-09">Reputación: </span><span class="ls-1 fs-09" id="reputation"></span></p>
+                                <p><span class="ls-1 fs-09">Créditos actuales: </span> <span class="ls-1 fs-09" id="credits"></span></p>
+                                <p><span class="ls-1 fs-09">Nivel: </span><span class="ls-1 fs-09" id="level"></span></p>
+                            </div>
+                        </div>
+                        <div class="lobby">
+                            <span class="ls-1 fs-175 boosting-title">Detalles del Encargo</span>
+                            <div class="lobby-btn">
+                                <button id="cancel-contract" onclick=cancelContract(this) class="sm-btn">❌</button>
+                                <button id="start-contract" onclick=startContract(this) class="sm-btn">✔️</button>
+                            </div>
+                            <div class="lobby-details">
+                                <div class="lobby-contractinfo">
+                                    <p><span class="ls-1 fs-09 boosting-text">ID:</span><span id="current-boosting-id"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text">Clase:</span><span id="current-boosting-class"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text">Dinero:</span><span id="current-boosting-money"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text">Créditos:</span><span id="current-boosting-credits"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text">Reputación:</span><span id="current-boosting-reputation"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text">Requiere hackeo:</span><span id="current-boosting-hacks"></span></p>
+                                </div>
+                                <div class="lobby-members">
+                                    <p><span class="ls-1 fs-09 boosting-text">MIEMBROS:</span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text boosting-member" id="boosting-member-0"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text boosting-member" id="boosting-member-1"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text boosting-member" id="boosting-member-2"></span></p>
+                                    <p><span class="ls-1 fs-09 boosting-text boosting-member" id="boosting-member-3"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons-header">
+                            <button onclick=toggleQueue() class="shadow__btn green-btn">🏁 Entrar en cola</button>
+                            <button id="joinLobby" onclick=joinLobby() class="shadow__btn purple-btn">Unirse a un grupo</button>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <p class="progress">Progreso</p>
+                        <div class="ldBar label-center xpBar" data-preset="circle" data-value="0" data-stroke-width=3 data-stroke="#ffff" data-stroke-trail="#ddd"></div>
+                        <p id="boost-status">En cola: <span style="color:red">Inactivo</span></p>
+                    </div>
+                </div>
+                <div class="dashboard-title mgb-5">TUS CONTRATOS</div>
+                <div class="dashboard-main"></div>
+            </div>
+            <div class='dashboard-settings'>
+                <img id="profile-picture-settings" class="profile-picture" src="./assets/pfp.jpg">
+                <div id="profileName" class="profile-name">Panel de Usuario</div>
+
+                <label for="usernameInput" class="profile-label">Nombre de usuario:</label>
+                <div class="profile-edit">
+                    <input type="text" id="usernameInput" class="profile-input" placeholder="Usuario">
+                    <button onclick="updateUsername()" class="profile-checkmark">✔️</button>
+                </div>
+
+                <label for="profilePicInput" class="profile-label">URL de la foto de perfil:</label>
+                <div class="profile-edit">
+                    <input type="text" id="profilePicInput" class="profile-input" placeholder="https://ejemplo.com/foto.jpg">
+                    <button onclick="updateProfilePic()" class="profile-checkmark">✔️</button>
+                </div>
+            </div>
+            <div class="dashboard-leaderboard">
+                <h1 style="margin: 0;">Tabla de clasificación</h2>
+                    <h4 style="margin-bottom: 4vh; margin-top: 1.75vh;">La tabla de clasificación se actualiza cada hora.</h2>
+                        <div id="racers-list"></div>
+            </div>
+            <div class="dashboard-shop">
+                <h1 style="margin: 0;">Tienda</h1>
+                <h4 id="user-shop-data" style="margin-bottom: 2vh; margin-top: 1.75vh;font-weight: 400;"></h4>
+                <div id="shop-list"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

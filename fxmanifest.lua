@@ -1,61 +1,46 @@
 fx_version 'cerulean'
+
 game 'gta5'
 
-author 'Jonirulah'
+author 'Jonirulah & Oasis Team'
+description 'Vehicle Boosting'
 version '1.0.0'
-description 'Joni Tablet'
 
-ui_page 'nui/internal/index.html'
+lua54 'yes'
 
-client_scripts {
-
-    'config.lua',
-    'client/main.lua',
-    'client/main_editable.lua',
-    'client/internal.lua',
-    'client/apps/**/**',
-    -- Everything below is user made
+shared_scripts {
+    '@ox_lib/init.lua',
+    'shared/config.lua',
+	'locale.lua',
 }
 
-files {
-    'nui/internal/index.html',
-    'nui/internal/tablet/vueApp.js',
-    'nui/internal/tablet/eventProcessor.js',
-    'nui/internal/tablet/internalEvents.js',
-    'nui/internal/tablet/notificationHandler.js',
-    'nui/internal/tablet/soundPlayer.js',
-    'nui/internal/style.css',
-    'nui/internal/img/**',
-    'nui/internal/libs/**',
-    'nui/internal/sound/**',
-    'nui/apps/**'
-    -- Everything below is user made
+client_scripts {
+    'client/framework/*.lua',
+    'client/client_editable.lua',
+    'client/client.lua',
+    'client/nui.lua',
 }
 
 server_scripts {
+	'@mysql-async/lib/MySQL.lua',
+    'server/framework/*.lua',
+    'server/server_sql.lua',
+    'server/server_editable.lua',
     'server/server.lua',
-    -- Everything below is user made.
+    'server/utils_editable.lua'
 }
 
-exports {
-    -- Internal exports
-    'isTabletOpen',
-    'hasTablet',
-    'playSound',
-    'registerApp',
-    'unregisterApp',
-    'toggleTablet',
-    'sendEvent',
-    'sendNotification',
-    'sendCalendarEvent',
-    'sendWeather',
-    'openApp',
-    'openTablet',
-    'updateApps'
-    -- Everything below is user made
+ui_page 'web/index.html'
+
+files {
+    'web/index.html',
+    'web/**/*',
 }
 
-server_exports { 
-    'registerAppData'
-    -- Everything below is user made
+depencendies {
+    '/onesync',
+    'glow_minigames',
+    'timer',
+    'joni_tablet',
+    't3_lockpick'
 }
